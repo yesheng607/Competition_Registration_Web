@@ -1,0 +1,85 @@
+库名称 - NCURobot
+表名称 - Reginfo
+
+序号                   -       id                            -       not null
+队伍名称             -       team_name             -       not null
+参赛项目             -       competition_item    -       not null
+##################################
+# value="1">自动分拣机器人项目	  # 				# value="2">智能搬运项目	                  #
+# value="3">无人机续航挑战项目	  #
+# value="4">无人机大战水果项目	  #
+# value="5">机器人先进视觉 - 2D识别项目   #
+# value="6">机器人先进视觉 - 3D识别项目	  #
+# value="7">工程创新项目	                  #
+##################################
+学院                   -       college                    -       not null
+指导老师姓名      -       adviser_name          -       not null
+指导老师职位      -       adviser_title             -       not null
+指导老师电话      -       adviser_phone         -       not null
+指导老师邮箱      -       adviser_email           -       not null
+领队姓名            -       leader_name            -       not null
+领队电话            -       leader_phone           -       not null
+领队邮箱            -       leader_email             -       not null
+队员1姓名          -       member1_name       -       not null
+队员1电话          -       member1_phone      -       not null
+队员1邮箱          -       member1_email        -       not null
+队员2姓名          -       member2_name
+队员2电话          -       member2_phone
+队员2邮箱          -       member2_email
+队员3姓名          -       member3_name
+队员3电话          -       member3_phone
+队员3邮箱          -       member3_email
+队员4姓名          -       member4_name
+队员4电话          -       member4_phone
+队员4邮箱          -       member4_email
+队员5姓名          -       member5_name
+队员5电话          -       member5_phone
+队员5邮箱          -       member5_email
+
+
+** 创建表 **
+create table Reginfo (
+    id int auto_increment,
+    team_name varchar(100) not null,
+    competition_item varchar(100) not null,
+    college varchar(100) not null,
+    adviser_name varchar(100) not null,
+    adviser_title varchar(100) not null,
+    adviser_phone varchar(100) not null,
+    adviser_email varchar(100) not null,
+    leader_name varchar(100) not null,
+    leader_phone varchar(100) not null,
+    leader_email varchar(100) not null,
+    member1_name varchar(100) not null,
+    member1_phone varchar(100) not null,
+    member1_email varchar(100) not null,
+    member2_name varchar(100),
+    member2_phone varchar(100),
+    member2_email varchar(100),
+    member3_name varchar(100),
+    member3_phone varchar(100),
+    member3_email varchar(100),
+    member4_name varchar(100),
+    member4_phone varchar(100),
+    member4_email varchar(100),
+    member5_name varchar(100),
+    member5_phone varchar(100),
+    member5_email varchar(100),
+    primary key (id)
+)engine=InnoDB default charset=utf8;
+
+#######################################################
+create table Reginfo (id int auto_increment,team_name varchar(100) not null,competition_item varchar(100) not null,college varchar(100) not null,adviser_name varchar(100) not null,adviser_title varchar(100) not null,adviser_phone varchar(100) not null,adviser_email varchar(100) not null,leader_name varchar(100) not null,leader_phone varchar(100) not null,leader_email varchar(100) not null,member1_name varchar(100) not null,member1_phone varchar(100) not null,member1_email varchar(100) not null,member2_name varchar(100),member2_phone varchar(100),member2_email varchar(100),member3_name varchar(100),member3_phone varchar(100),member3_email varchar(100),member4_name varchar(100),member4_phone varchar(100),member4_email varchar(100),member5_name varchar(100),member5_phone varchar(100),member5_email varchar(100),primary key (id))engine=InnoDB default charset=utf8;
+#######################################################
+
+** 插入数据 **
+insert into Reginfo (team_name,competition_item,college,adviser_name,adviser_title,adviser_phone,adviser_email,leader_name,leader_phone,leader_email,member1_name,member1_phone,member1_email,member2_name,member2_phone,member2_email,member3_name,member3_phone,member3_email,member4_name,member4_phone,member4_email,member5_name,member5_phone,member5_email)
+values
+('NCU','智能搬运','信工','测试老师','教授','01234567890','123@qq.com','测试领队','01234567890','123@qq.com','测试队员1','01234567890','123@qq.com','测试队员2','01234567890','123@qq.com','测试队员3','01234567890','123@qq.com','测试队员4','01234567890','123@qq.com','测试队员5','01234567890','123@qq.com');
+
+#######################################################
+insert into Reginfo(team_name,competition_item,college,adviser_name,adviser_title,adviser_phone,adviser_email,leader_name,leader_phone,leader_email,member1_name,member1_phone,member1_email,member2_name,member2_phone,member2_email,member3_name,member3_phone,member3_email,member4_name,member4_phone,member4_email,member5_name,member5_phone,member5_email)values('NCU','智能搬运','信工','测试老师','教授','01234567890','123@qq.com','测试领队','01234567890','123@qq.com','测试队员1','01234567890','123@qq.com','测试队员2','01234567890','123@qq.com','测试队员3','01234567890','123@qq.com','测试队员4','01234567890','123@qq.com','测试队员5','01234567890','123@qq.com');
+#######################################################
+
+** 删除表 **
+drop table Reginfo;
